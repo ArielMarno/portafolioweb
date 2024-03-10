@@ -1,0 +1,134 @@
+
+/* Contenedor principal */
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+    background: var(--color-dark);
+    background-image: url("src/assets/ttten.svg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Contenedor dividido en dos cajas, section y article */
+
+.contenedor-txt{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+}
+
+/* Titulo y subtitulo */
+
+.contenedor-txt section{
+    text-align: right;
+    width: 45%;
+}
+
+.contenedor-txt section h2{
+    font-family: var(--font-family);
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+}
+
+.contenedor-txt section p{
+    font-family: var(--font-family);
+    color: var(--color-orange);
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Parrafos */
+
+.contenedor-txt article{
+    width: 55%;
+}
+
+.contenedor-txt article p{
+    font-family: var(--font-alt);
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 27px;
+    max-width: 60%;
+    text-align: justify;
+}
+
+/* Codigo adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1250px){
+
+    .contenedor-txt{
+        gap: 4rem;
+    }
+    
+    .contenedor-txt section{
+        width: 40%;
+    }
+
+    .contenedor-txt section h2{
+        font-size: 2.3rem;
+    }
+
+    .contenedor-txt section p{
+        font-size: 1.1rem;
+    }
+
+    .contenedor-txt article{
+        width: 60%;
+    }
+
+    .contenedor-txt article p{
+        font-size: 1.1rem;
+        line-height: 25px;
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .contenedor-txt{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 5rem;
+    }
+
+    .contenedor-txt section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: right;
+        width: 100%;
+    }
+
+    .contenedor-txt section h2{
+        font-size: 1.6rem;
+    }
+
+    .contenedor-txt section p{
+        font-size: 1rem;
+    }
+
+    .contenedor-txt article{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+    
+    .contenedor-txt article p{
+        max-width: 100%;
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+

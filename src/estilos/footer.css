@@ -1,0 +1,210 @@
+/* Contenedor principal del componente */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    background: var(--color-dark);
+}
+
+
+/* Boton para subir al inicio */
+
+.btn-top{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.btn-top a img{
+    margin: 2rem;
+    margin-bottom: 0;
+    width: 50px;
+}
+
+
+/* Contenedor principal */
+
+.footer section{
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem;
+}
+
+/* Formulario de contacto */
+
+.footer .form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5rem;
+}
+
+.footer .form h2{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 1rem;
+    color: #fff;
+    width: 45%;
+}
+
+.footer form{
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    max-width: 50%;
+    width: 800px;
+    background: rgba( 0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.footer form label{
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-bottom: 0;
+    color: #fff;
+}
+
+.footer form textarea{
+    color: #fff;
+    font-family: var(--font-alt);
+    font-size: 0.9rem;
+    min-height: 200px;
+    max-width: 100%;
+    resize: none;
+    background: none;
+    border: none;
+    border-bottom: solid 1px var(--color-orange);
+    padding: 0.5rem;
+}
+
+.footer .btn-form{
+    max-width: 5rem;
+    margin: 0 0.5rem 1rem 0;
+    padding: 0.3rem;
+    background: var(--color-orange);
+    border: solid 1px var(--color-orange);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-dark);
+    cursor: pointer;
+}
+
+.footer .btn-form:hover{
+    background: #df910a;
+}
+
+
+/* Contenedor links a secciones de la pagina y iconos con redes */
+
+.contenedor-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/* Iconos con links a las redes de contacto */
+
+
+.contenedor-footer section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.contenedor-footer section h3{
+    font-size: 1rem;
+    color: #fff;
+    font-family: var(--font-family);
+}
+.contenedor-footer .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.contenedor-footer .icons a img{
+    width: 35px;
+}
+
+
+/* Icono y ubicación en la parte final del componente */
+
+.ubicacion{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 2.2rem;
+    margin-right: 2.2rem;
+    gap: 0.3rem;
+}
+
+.ubicacion p{
+    gap: 0.1rem;
+    font-size: 0.9rem;
+    font-family: var(--font-alt);
+    font-weight: 600;
+    color: #fff;
+}
+
+.ubicacion img{
+    width: 25px;
+}
+
+
+/* Codigo adaptable para dispositivos mobiles */
+
+
+@media screen and (max-width: 1050px){
+    .footer .form h2{
+        font-size: 1.5rem;
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 1050px){
+    .footer .form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+
+    .footer .form h2{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .footer form{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 580px){
+
+    
+    .ubicacion p{
+        font-size: 0.8rem;
+        gap: 0.1rem;
+        font-family: var(--font-alt);
+        color: #fff;
+    }
+    
+    .ubicacion img{
+        width: 30px;
+    }
+}
+
+

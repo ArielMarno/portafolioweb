@@ -1,0 +1,287 @@
+nav{
+    font-family: var(--font-family);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav h1{
+  font-size: 1.3rem;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+/* Menu hamburguesa para dispositivos mobiles */
+
+.burguer{
+  display: none;
+}
+
+/* Links del navegador */
+.links a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+nav .cv{
+  display: none;
+}
+
+nav .hide-links{
+  display: none;
+}
+
+/* Efecto de subrayado  al pasar el mouse por encima del enlace */
+
+.links a:after {
+  display: block;
+  content: '';
+  margin-top: 0.2rem;
+  border-bottom: solid 2px var(--color-orange);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.links a:hover:after {
+  transform: scaleX(1);
+}
+
+/* Boton para descarga del CV */
+
+.button {
+    font-family: var(--font-family);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    color: var(--color-text);;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7rem;
+    transition: all .15s ease;
+    letter-spacing: 1px;
+  }
+
+  
+  .button::before,
+  .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid var(--color-green);
+    transition: all .15s ease;
+  }
+  
+  .button::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+  
+  .button::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+  
+  .button:active,
+  .button:focus {
+    outline: none;
+  }
+  
+  .button:active::before,
+  .button:active::after {
+    right: 3px;
+    left: 3px;
+  }
+  
+  .button:active::before {
+    top: 3px;
+  }
+  
+  .button:active::after {
+    bottom: 3px;
+  }
+  
+  .button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--color-dark);
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  
+  .button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: var(--color-dark);;
+  }
+  
+  .button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: var(--color-dark);;
+    transition: all .2s ease;
+    
+  }
+  
+  .button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background: var(--color-orange02);
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+  
+  .button_text {
+    position: relative;
+  }
+
+  .button_text {
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-family: var(--font-family);
+    color: #fff;
+  }
+  
+  .button:hover .button_sl {
+    width: calc(100% + 15px);
+  }
+  
+  .button:hover .button_lg::after {
+    background-color: var(--color-orange02);
+  }
+
+
+
+/* Codigo adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1150px) {
+  nav{
+      padding: 0.5rem 1rem;
+  }
+
+  nav h1{
+      font-size: 1rem;
+  }
+
+  .links{
+      gap: 2.5rem;
+  }
+  
+  
+  .links a{
+      font-size: 0.5rem;
+  }
+  
+  .links a:after {
+    border-bottom: solid 1px var(--color-orange);
+    margin-top: 0.1rem;  
+  }
+
+  .button {
+    padding: 6px;
+    margin-bottom: 10px;
+    font-size: 0.6rem;
+  }
+}
+
+
+
+@media screen and (max-width: 800px){
+
+    .button{
+      display: none;
+    }
+
+    .links {
+      position:absolute;
+      top: -700px;
+      left: -2000px;
+      text-align: center;
+    }
+
+    .links.active{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: right;
+      gap: 0.5rem;
+      position: absolute;
+      top: 50px;
+      right: 3%;
+    }
+
+    .links a:after {
+      display: none;
+    }
+    
+    .links a:hover{
+      color: var(--color-orange);
+    }
+
+    .burguer{
+      display: flex;
+    }
+
+    nav .cv {
+      display: block;
+    }
+}
+
+
+@media screen and (max-width: 580px){
+  .links.active{
+    right: 5%;
+  }
+}
+
+
+@media screen and (max-width: 460px){
+  nav{
+    padding: 0.5rem 0.5rem;
+  }
+  nav h1{
+    max-width: 100px;
+    font-size: 0.9rem;
+  }
+  
+  nav .hide-links{
+    display: inline-block;
+  }
+}

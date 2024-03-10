@@ -1,0 +1,371 @@
+.proyectos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(30deg, rgba(115, 79, 154, 1) 0%, rgba(29, 26, 47, 1) 100%);
+}
+
+/* Titulo principal del componente */
+
+.proyectos .title{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}
+
+.title h2{
+    font-size: 3rem;
+    font-family: var(--font-family);
+    letter-spacing: 3px;
+
+    margin-left: 1.5rem;
+    color: #fff;
+}
+
+.proyectos .title p{
+    font-size: 0.7rem;
+    color: var(--color-orange);
+    letter-spacing: 2px;
+}
+
+
+/* Medidas, orientacion de cajas y su contenido */
+
+.proyectos main{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Contenedor de cada proyecto */
+
+.proyectos article{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    padding: 0 4rem;
+}
+
+/* Titulo, texto y botones con los links del proyecto */
+
+.proyectos section{
+    width: 40%;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    gap: 1rem;
+    margin-left: 3rem;
+}
+
+.proyectos section h3{
+    max-width: 400px;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1rem;
+
+    font-family: var(--font-family);
+    font-size: 2rem;
+    letter-spacing: 3px;
+
+    color: #fff;
+    border-bottom: 2px solid var(--color-orange);
+}
+
+.proyectos section p{
+    font-family: var(--font-alt);
+    font-size: 1.1rem; 
+    line-height: 30px;
+    
+    max-width: 92%;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+  
+.buttons a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: var(--font-alt);
+  
+    color: #fff;
+    text-decoration: none;
+    background: var(--color-dark);
+    padding: 0.7rem;
+    border: 2px solid var(--color-dark);
+    border-radius: 5px;
+}
+  
+.buttons a:hover{
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    color: var(--color-green);
+    border: var(--color-green) solid 2px;
+}
+
+
+/* Contenedor con las  imagenes de los proyectos */
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+}
+
+
+/* Mockups de los proyectos(destock) */
+
+aside img{
+    width: 900px;
+    padding: 0 0.5rem;
+}
+
+/* Mockups ocultas para escritorio (tablet y smartphones) */
+
+.tablet, .mobile{
+    display: none;
+}
+
+
+/* Cambio del color de fondo y orientación en sentido opuesto en dos de los proyectos */
+
+.gpt4, .weather{
+    background: #0F151B;
+    box-shadow: 10px 0 5px 0 rgba(0,0,0,0.75);
+}
+
+.gpt4 section, .weather section{
+    align-items: flex-start;
+    text-align: left;
+    margin-right: 3rem;
+    margin-left: 0;
+}
+
+.gpt4 aside, .weather aside{
+    align-items: flex-end;
+}
+
+
+
+/* Diseño adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1550px){
+
+    .proyectos article{
+        padding: 5rem 4rem;
+    }
+    aside img{
+        width: 780px;
+        padding: 1rem;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1350px){
+
+    .proyectos article{
+        padding: 5rem 3rem;
+    }
+
+    .proyectos section{
+        width: 50%;
+    }
+
+    .proyectos section h3{
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .proyectos section p{
+        max-width: 80%;
+        line-height: 27px;
+        font-size: 1rem;
+    }
+
+/* Ocultar mockups para destock */
+
+    .destock{
+        display: none;
+    }
+    
+/* Mostrar mockups para tablets */
+
+    .tablet{
+        display: flex;
+    }
+
+    aside{
+        width: 50%;
+    }
+    
+    aside img{
+        width: 600px;
+        padding: 1rem;
+    }
+}
+
+
+
+@media screen and (max-width: 1150px){
+
+    .title h2{
+        font-size: 2.5rem;
+    }
+
+    .proyectos section h3{
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        max-width: 300px;
+    }
+    
+    
+    .proyectos section p{
+        max-width: 100%;
+        font-size: 0.9rem;
+    }
+
+    aside img{
+        width: 530px;
+        padding: 0 0.5rem;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1050px){
+    aside img{
+        width: 400px;
+    }
+
+    .buttons{
+        gap: 0.3rem;
+      }
+      
+    .buttons a {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 800px){
+
+    .proyectos .title{
+        margin-bottom: 8rem;
+        margin-top: 3rem;
+    }
+    .title h2{
+        font-size: 2rem;
+    }
+
+    .proyectos .title p{
+        max-width: 100%;
+        font-size: 0.5rem;
+    }
+
+   /* Invertir orientación cajas dentro del articulo para que todas las imagenes queden por debajo */ 
+    .proyectos article{
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .proyectos .gpt4, .proyectos .weather{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .proyectos section{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        text-align: left;
+        margin: 0;
+    }
+    
+    .proyectos section p{
+        font-size: 1rem;
+        max-width: 90%;
+        text-align: justify;
+    }
+    
+    aside{
+        width: 100%;
+        margin-top: 5rem;
+        align-items: center;
+    }
+    
+    aside img{
+        width: 440px;
+        padding: 0;
+    }
+    
+    .gpt4 section, .weather section{
+        margin: 0;
+    }
+
+    .gpt4 aside, .weather aside{
+        align-items: center;
+    }
+    
+}
+
+@media screen and (max-width: 580px){
+    .proyectos .title{
+        margin-bottom: 7rem;
+        margin-top: 5rem;
+    }
+
+    .proyectos .title h2{
+        font-size: 1.7rem;
+    }
+
+    .proyectos article{
+        margin: 0;
+        padding: 2rem 0;
+    }
+
+    .proyectos section{
+        padding: 0 1rem;
+    }
+    .proyectos section h3{
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+    }
+
+    .proyectos section p{
+        font-size: 0.8rem;
+        padding: 0;
+    }
+
+    .tablet{
+        display: none;
+    }
+
+    .mobile{
+        display: flex;
+    }
+      
+    .buttons a {
+        font-size: 0.6rem;
+        padding: 0.7rem;
+    }
+
+    aside img{
+        width: 350px;
+        padding: 0.5rem;
+    }
+}

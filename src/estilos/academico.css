@@ -1,0 +1,193 @@
+/* Contenedor principal */
+
+.academico{
+    min-height: 80vh;
+    background: linear-gradient(30deg, rgba(115, 79, 154, 1) 0%, rgba(29, 26, 47, 1) 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.academico article{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 40%;
+}
+
+/* Titulo de la sección*/
+
+.academico article h2{
+    font-family: var(--font-family);
+    font-size: 2.5rem;
+    color: #fff;
+    letter-spacing: 1px;
+    text-align: left;
+    border-bottom: 2px solid var(--color-orange);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+
+
+/* Parrafo */
+
+.academico article  p{
+    font-family: var(--font-alt);
+    text-align: justify;
+    line-height: 27px;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 75%;
+}
+
+/* Nombres de las instituciones */
+
+.academico article span{
+    font-weight: 600;
+}
+
+
+/* Contenedor de logos */
+
+.academico aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 60%;
+    padding: 0.5rem;
+}
+
+.academico aside div{
+    display: flex;
+    gap: 3rem;
+}
+
+/* Logos de las instituciones */
+
+.academico aside img{
+    width: 300px;
+    padding: 0.5rem;
+}
+
+
+/* Codigo adaptable para dispositivos mobiles */
+
+@media screen and (max-width: 1400px){
+
+    .academico aside{
+        gap: 2rem;
+    }
+    
+    .academico aside div{
+        gap: 2rem;
+    }
+
+    .academico aside img{
+        width: 280px;
+    }
+}
+
+
+@media screen and (max-width: 1250px){
+
+    .academico article{
+        width: 50%;
+    }
+    
+    .academico article h2{
+        font-size: 2.3rem;
+    }
+
+    .academico article  p{
+        line-height: 25px;
+        font-size: 1rem;
+        width: 90%;
+        padding: 0;
+    }
+    
+    .academico aside{
+        width: 50%;
+    }
+
+    .academico aside{
+        gap: 1.5rem;
+    }
+    
+    .academico aside div{
+        flex-direction: column;
+    }
+
+    .academico aside img{
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .academico{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .academico article{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 5rem;
+    }
+
+    .academico aside {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 5rem;
+        padding: 0;
+    }
+
+    .academico aside div{
+        flex-direction: row;
+    }
+
+    .academico aside img{
+        width: 240px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+
+    .academico{
+        gap: 1.5rem;
+    }
+
+    .academico article h2{
+        font-size: 1.6rem;
+    }
+
+    .academico article p{
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .academico aside{
+        margin: 0;
+        margin-bottom: 5rem;
+    }
+
+    .academico aside div{
+        gap: 0.5rem;
+    }
+
+    .academico aside img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .academico aside img{
+        width: 170px;
+    }
+}

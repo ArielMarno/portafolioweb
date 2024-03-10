@@ -1,0 +1,273 @@
+/* Medida y visibilidad del contenedor principal */
+.inicio{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(348deg, rgba(27, 24, 43, 1) 0%, rgba(115, 79, 154, 1) 100%);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: flex-start;
+    justify-items:center ;
+}
+
+/* Titulo principal  de la pagina */
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: var(--font-family);
+}
+
+.title h1{
+    color: #fff;
+    font-size: 4.8rem;
+    font-style: italic;
+    font-weight: 900;
+    margin-left: 1.5rem;
+}
+
+/* Subtitulo debajo del titulo principal */
+
+.title p{
+    color: var(--color-orange);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+
+/* Contenedor con email de contacto */
+
+.contacto{
+    width: 100%;
+    color: #fff;
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+
+/* Icono y texto Email */
+
+.box p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.email-titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.email-titulo img{
+    width: 30px;
+}
+
+/* Texto arielmarno@outllok.com y botones para enviar corre o copiar al portapapeles */
+
+.email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.email p{
+    letter-spacing: 2px;
+    font-weight: 400;
+    padding: 0.6rem 1rem;
+    background: var(--color-dark);
+    border-radius: 5px;
+    margin-right: 0.3rem;
+}
+
+.email img{
+    width: 32px;
+    cursor: pointer;
+    padding: 0.3rem;
+    margin-right: 0.2rem;
+    background: var(--color-dark);
+    border-radius: 5px;
+    margin-top: 0.3rem;
+}
+
+.copiar-email {
+    margin-bottom: 0.2rem;
+}
+
+.box:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Botones con links a redes sociales */
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.socials img{
+    margin-top: 0.5rem;
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Diseño adaptable para dispositivos mobiles */
+
+
+@media screen and (max-width: 1150px) {
+
+    .title h1{
+        font-size: 3.2rem;
+    }
+    
+    .contacto{
+        padding: 1rem;
+        align-items: flex-end;
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .title{
+        align-items: left;
+        padding: 0.8rem;
+    }
+    .title h1{
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    .box {
+        padding: 1.5rem;
+    }
+    
+    .box p{
+        font-size: 0.8rem;
+    }
+    
+    .email-titulo{
+        gap: 0.2rem;
+    }
+    
+    .email-titulo img{
+        width: 27px;
+    }
+    
+    .email p{
+        font-size: 0.7rem;
+    }
+    
+    .email img{
+        width: 32px;
+        padding: 0.5rem;
+    }
+    
+    .socials img{
+        width: 30px;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 580px){
+
+    .title{
+        padding: 0.5rem;
+    }
+    .title h1{
+        margin-top: 1rem;
+        max-width: 450px;
+        font-size: 1.9rem;
+    }
+
+    .title p{
+        font-size: 1.2rem;
+    }
+
+    .contacto{
+        flex-direction: row;
+        padding: 0;
+        align-items: center;
+    }
+
+    .box:first-child{
+        padding-right: 0;
+    }
+    
+    .box p{
+        font-size: 0.7rem;
+    }
+    
+    .email p{
+        font-size: 0.8rem;
+    }
+
+    .box:last-child p{
+        display: none;
+    }
+    
+    .box:last-child{
+        margin-top: 1.3rem;
+    }
+
+    .socials img{
+        width: 26px;
+    }
+}
+
+
+@media screen and (max-width: 460px){
+    
+    .title h1{
+        margin-top: 2rem;
+        max-width: auto;
+        font-size: 1.3rem;
+    }
+  
+    .title p{
+        font-size: 0.7rem;
+    }
+    .box {
+        padding: 1.5rem;
+    }
+    
+    .box p{
+        font-size: 0.7rem;
+    }
+    
+    .email-titulo{
+        gap: 0.2rem;
+    }
+    
+    .email-titulo img{
+        width: 22px;
+    }
+    
+    .email p{
+        font-size: 0.6rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .email img{
+        width: 28px;
+        padding: 0.4rem;
+    }
+
+    .box:last-child{
+        display: none;
+    }
+}

@@ -1,0 +1,97 @@
+/* Contenedor principal del componente */
+
+.tecnologias{
+    background: var(--color-dark);
+    display: flex;
+    flex-direction: row;
+    min-height: 40vh;
+    padding: 5rem 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+/* Contenedor de los iconos */
+
+.icon-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+.icon{
+    font-family: var(--font-family);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Logo de cada tecnología */
+
+.logo{
+    width: 100px;
+    padding: 0.5rem;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+
+/* Efecto neon detras de los iconos */
+
+  .logo.html:hover{
+    filter: drop-shadow(0 0 2em #E44D26);
+  }
+  .logo.css:hover{
+    filter:  drop-shadow(0 0 2em #1F62AE);
+  }
+
+  .logo.js:hover{
+    filter: drop-shadow(0 0 2em #e6c702);
+  }
+  .logo.react:hover{
+    filter: drop-shadow(0 0 2em #00D8FF);
+  }
+
+
+
+/* Diseño adaptable para dispositivos mobiles */
+
+  @media screen and (max-width: 1150px){
+    .tecnologias, .icon-container{
+      gap: 5rem;
+    }
+
+    .logo{
+      width: 80px;
+    }
+  }
+
+
+  @media screen and (max-width: 800px) {
+
+    .tecnologias, .icon-container{
+      gap: 4rem;
+    }
+    .icon p{
+      font-size: 0.8rem;
+    }
+    .logo {
+      width: 70px;
+    }
+  }
+
+
+  @media screen and (max-width: 580px){
+
+    .icon-container{
+      gap: 1.2rem;
+    }
+
+    .logo{
+      width: 60px;
+    }
+  }
+
+
+
