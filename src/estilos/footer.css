@@ -172,7 +172,7 @@
 }
 
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 800px){
     .footer .form{
         display: flex;
         flex-direction: column;
@@ -192,7 +192,7 @@
 }
 
 
-@media screen and (max-width: 580px){
+@media screen and (max-width: 600px){
 
     
     .ubicacion p{
@@ -208,3 +208,9 @@
 }
 
 
+@media screen and (max-width: 480px){
+
+    .footer .form h2{
+        font-size: 1.3rem;
+    }
+}
